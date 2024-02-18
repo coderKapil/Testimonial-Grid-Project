@@ -7,7 +7,13 @@
   display: grid;
   gap: 2rem;
   max-width: 100vw;
-  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-columns: repeat(4, 1fr); */
+  grid-template-areas:
+    "#733fc8"
+    "#49556b"
+    "white"
+    "white"
+    "#18202d";
 }
 
 .box {
@@ -128,14 +134,16 @@
   .side-details {
     font-size: 20px;
   }
+
+  .box {
+    min-height: 300px;
+  }
 }
 
-@media (min-width: 1060) {
+@media (max-width: 1000px) {
   .container {
-    background-color: #edf2f8;
-    display: grid;
-    gap: 2rem;
-    max-width: 100vw;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "#733fc8 #733fc8 #49556b white"
+      "white #18202d #18202d white";
   }
 }
